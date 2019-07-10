@@ -75,7 +75,7 @@
         <div class="posts">
     <article class="post-whole">
         <div class="post-title">
-            <h2 class="title">JavaScript 学习笔记</h2>
+            <h2 class="title"></h2>
             <div class="post-meta">
                 <span class="post-time">2019-07-10</span>
                 
@@ -93,45 +93,36 @@
             <p>Notes from <em>Eloquent JavaScript</em></p>
 <a id="more"></a>
 
-<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p>表示科学计数法：<code>2.998e8</code> = 2.998 × 10^8</p>
-<br>
-
-<p>正负无穷：<code>Infinity</code>,  <code>-Infinity</code></p>
-<br>
-
-<p>出现 arithmetic error 的时候并不会报错，而是得到<code>NaN</code> – not a number</p>
-<br>
-
-<p>string 可用单/双引号和 `，但是 ` 中的 string 可以使用 <code>${ }</code> 标记 <strong>template literal</strong> 进行算数运算</p>
+<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><ul>
+<li><p>表示科学计数法：<code>2.998e8</code> = 2.998 × 10^8</p>
+</li>
+<li><p>正负无穷：<code>Infinity</code>,  <code>-Infinity</code></p>
+</li>
+<li><p>出现 arithmetic error 的时候并不会报错，而是得到<code>NaN</code> – not a number</p>
+</li>
+<li><p>string 可用单/双引号和 `，但是 ` 中的 string 可以使用 <code>${ }</code> 标记 <strong>template literal</strong> 进行算数运算</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`half of 100 is <span class="subst">$&#123;<span class="number">100</span> <span class="regexp">/ 2&#125;` ==  “half of 100 is 50”</span></span></span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>同其他语言一样可用 <code>\</code> 来表示 escaping the character</p>
-<br>
-
-<p>使用 <code>typeof</code> 来表示类型，i.e. typeof 4.5 = ‘number’</p>
-<br>
-
-<p>string 可以直接用 == 或 != , &lt;, &gt; 比较</p>
-<br>
-
-<p>NaN != NaN</p>
-<br>
-
-<p>null –  赋值为空 VS undefined – 定义了但还未赋值</p>
+</li>
+<li><p>同其他语言一样可用 <code>\</code> 来表示 escaping the character</p>
+</li>
+<li><p>使用 <code>typeof</code> 来表示类型，i.e. typeof 4.5 = ‘number’</p>
+</li>
+<li><p>string 可以直接用 == 或 != , &lt;, &gt; 比较</p>
+</li>
+<li><p>NaN != NaN</p>
+</li>
+<li><p>null –  赋值为空 VS undefined – 定义了但还未赋值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>, <span class="literal">null</span> != <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>JS 拥有 <strong>type coercion</strong> 特性，字符，数字，null(0) 可以一定程度混合运算，混合失败会返回 NaN</p>
+</li>
+<li><p>JS 拥有 <strong>type coercion</strong> 特性，字符，数字，null(0) 可以一定程度混合运算，混合失败会返回 NaN</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span> == <span class="number">0</span>, <span class="literal">false</span> == <span class="string">""</span></span><br></pre></td></tr></table></figure>
 
 <p>如果不需要强制转换，使用 === 或 !===</p>
-<br>
-
-<p><code>||</code>  会返回左边第一个 true 的东西 (false – null/“”/0/NaN)，</p>
+</li>
+<li><p><code>||</code>  会返回左边第一个 true 的东西 (false – null/“”/0/NaN)，</p>
 <p>相反，<code>&amp;&amp;</code> 返回左边第一个 false 的东西</p>
+</li>
+</ul>
 <h2 id="JS基础"><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h2><p>句尾 <code>;</code> 可省，单句换行除外</p>
 <br>
 
@@ -157,12 +148,6 @@
 
 <p>function 如果不 return 特定的值，则默认返回 undefined</p>
 
-        </div>
-        
-        <div class="post-tag">
-            
-            <a class="tag" href="/tags/JavaScript/" title="JavaScript">JavaScript</a>
-            
         </div>
         
     </article>
