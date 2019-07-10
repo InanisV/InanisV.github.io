@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Hello World |   InanisV&#39;s Blog </title>
+  <title>  JavaScript 学习笔记 |   InanisV&#39;s Blog </title>
 
  
   
@@ -88,17 +88,17 @@
 	
 <div class="header">
 		<p class="title">	
-			Hello World
+			JavaScript 学习笔记
 		</p>
 		<div class="info">	
 			<time>
-				Jun 11, 2019
+				Jul 10, 2019
 			</time>
 
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">388
+				<span class="words">964
 				</span>
 			
 		</div>
@@ -131,22 +131,71 @@
 		
 
 			
-					<p>nayo模版的官方样例（暂存）</p>
+					<p>Notes from <em>Eloquent JavaScript</em></p>
 <a id="more"></a>
 
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<ul>
+<li><p>变量类型</p>
+<ul>
+<li><p>表示科学计数法：<code>2.998e8</code> = 2.998 × 10^8</p>
+</li>
+<li><p>正负无穷：<code>Infinity</code>,  <code>-Infinity</code></p>
+</li>
+<li><p>出现 arithmetic error 的时候并不会报错，而是得到<code>NaN</code> – not a number</p>
+</li>
+<li><p>string 可用单/双引号和`` <code>，但是 \</code> 中的 string 可以使用 <code>${ }</code> 标记 <strong>template literal</strong> 进行算数运算</p>
+<p>`half of 100 is ${100 / 2}` ==  “half of 100 is 50”</p>
+</li>
+<li><p>同其他语言一样可用 <code>\</code> 来表示 escaping the character</p>
+</li>
+<li><p>使用 <code>typeof</code> 来表示类型，i.e. typeof 4.5 = ‘number’</p>
+</li>
+<li><p>string 可以直接用 == 或 != , &lt;, &gt; 比较</p>
+</li>
+<li><p>NaN != NaN</p>
+</li>
+<li><p>null –  赋值为空 VS undefined – 定义了但还未赋值</p>
+<p>null == undefined, null != 0</p>
+</li>
+<li><p>JS 拥有 <strong>type coercion</strong> 特性，字符，数字，null(0) 可以一定程度混合运算，混合失败会返回 NaN</p>
+<p>false == 0, false == “”</p>
+<p>如果不需要强制转换，使用 === 或 !===</p>
+</li>
+<li><p><code>||</code>  会返回左边第一个 true 的东西 (false – null/“”/0/NaN)，</p>
+<p>相反，<code>&amp;&amp;</code> 返回左边第一个 false 的东西</p>
+</li>
+</ul>
+</li>
+<li><p>JS基础</p>
+<ul>
+<li><p>句尾 <code>;</code> 可省，单句换行除外</p>
+</li>
+<li><p><strong>binding</strong> – 关键词包括 var/ let/ const</p>
+<p>区别：</p>
+<ol>
+<li>let 的 scope 更小 ，只在 block 中生效，而 var is function-scoping</li>
+<li>var 支持同 scope 重复定义，let 不行</li>
+</ol>
+</li>
+<li><p>prompt(“ “) function – 网页弹出对话框提示输入，返回输入值 – 已被淘汰……..</p>
+</li>
+<li><p>console.log() – command line 打印</p>
+</li>
+<li><p>强制转换 function – 包括 Number(), String(), Boolean()</p>
+</li>
+</ul>
+</li>
+<li><p>Function</p>
+<ul>
+<li><p>基于 <strong>binding</strong> 的 function 定义</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> square = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x * x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(square(<span class="number">12</span>));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>function 如果不 return 特定的值，则默认返回 undefined</p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
   	
 					
 	  </div>     
@@ -159,7 +208,7 @@
 
       
       <i class="iconfont icon-tag"></i>
-      <a class="tag-link" href="/tags/start/">start</a>
+      <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
       
     </div>
 
@@ -200,16 +249,16 @@
   <nav class="nav">
     <div class="link">
       
-    </div>
-    <div class="link">
-      
-      <a href="/2019/06/11/Hexo-github-Blog搭建/" class="link-wrap">
-        <strong class="caption">newer</strong>
+      <a href="/2019/06/14/Beginning-Python阅读笔记-Chapter1/" class="link-wrap">
+        <strong class="caption">older</strong>
         
         <span class="title">
-          Hexo+github Blog搭建
+          Beginning Python阅读笔记 -- Chapter1
         </span>
       </a>
+      
+    </div>
+    <div class="link">
       
     </div>
   </nav>
