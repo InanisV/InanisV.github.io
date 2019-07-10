@@ -98,7 +98,7 @@
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">937
+				<span class="words">977
 				</span>
 			
 		</div>
@@ -144,30 +144,57 @@
 <br>
 
 <p>string 可用单/双引号和 `，但是 ` 中的 string 可以使用 <code>${ }</code> 标记 <strong>template literal</strong> 进行算数运算</p>
-<p>`half of 100 is ${100 / 2}` ==  “half of 100 is 50”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`half of 100 is <span class="subst">$&#123;<span class="number">100</span> <span class="regexp">/ 2&#125;` ==  “half of 100 is 50”</span></span></span></span><br></pre></td></tr></table></figure>
+
+<br>
+
 <p>同其他语言一样可用 <code>\</code> 来表示 escaping the character</p>
+<br>
+
 <p>使用 <code>typeof</code> 来表示类型，i.e. typeof 4.5 = ‘number’</p>
+<br>
+
 <p>string 可以直接用 == 或 != , &lt;, &gt; 比较</p>
+<br>
+
 <p>NaN != NaN</p>
+<br>
+
 <p>null –  赋值为空 VS undefined – 定义了但还未赋值</p>
-<p>null == undefined, null != 0</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>, <span class="literal">null</span> != <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
 <p>JS 拥有 <strong>type coercion</strong> 特性，字符，数字，null(0) 可以一定程度混合运算，混合失败会返回 NaN</p>
-<p>false == 0, false == “”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span> == <span class="number">0</span>, <span class="literal">false</span> == <span class="string">""</span></span><br></pre></td></tr></table></figure>
+
 <p>如果不需要强制转换，使用 === 或 !===</p>
+<br>
+
 <p><code>||</code>  会返回左边第一个 true 的东西 (false – null/“”/0/NaN)，</p>
 <p>相反，<code>&amp;&amp;</code> 返回左边第一个 false 的东西</p>
 <h2 id="JS基础"><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h2><p>句尾 <code>;</code> 可省，单句换行除外</p>
+<br>
+
 <p><strong>binding</strong> – 关键词包括 var/ let/ const</p>
 <p>区别：</p>
 <ol>
 <li>let 的 scope 更小 ，只在 block 中生效，而 var is function-scoping</li>
 <li>var 支持同 scope 重复定义，let 不行</li>
 </ol>
+<br>
+
 <p>prompt(“ “) function – 网页弹出对话框提示输入，返回输入值 – 已被淘汰……..</p>
+<br>
+
 <p>console.log() – command line 打印</p>
+<br>
+
 <p>强制转换 function – 包括 Number(), String(), Boolean()</p>
 <h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p>基于 <strong>binding</strong> 的 function 定义</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> square = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x * x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(square(<span class="number">12</span>));</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <p>function 如果不 return 特定的值，则默认返回 undefined</p>
   	
@@ -274,7 +301,7 @@
   
     <div class="none" id="search">
     <div class="header">
-        <input type="text" placeholder="输入你想搜索的" id="search-input" class="input">
+        <input type="text" placeholder="Typing Something here." id="search-input" class="input">
         
         <i id="search-cancel" class="iconfont icon-cancel"></i>
     </div>
@@ -290,31 +317,31 @@
          
             
 
-            <a class="mobile-menu-link" href="/">首页
+            <a class="mobile-menu-link" href="/">Home
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/archives">归档
+            <a class="mobile-menu-link" href="/archives">Archives
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/tags">标签
+            <a class="mobile-menu-link" href="/tags">Tags
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/about">关于
+            <a class="mobile-menu-link" href="/about">About
             </a>
             
          
                           
 
-            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            <a class="mobile-menu-link mobile-menu-search" href="#">Search </a>                 
             
          
       
