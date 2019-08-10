@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Hexo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
+
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link">
+                首页
+            </a>
+            
+
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">InanisV's Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">Machine learning学习笔记#1</h2>
+            <div class="post-meta">
+                <span class="post-time">2019-08-10</span>
+                
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition-of-machine-learning"><span class="toc-text">Definition of machine learning</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tom-Mitchell"><span class="toc-text">Tom Mitchell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Arthur-Samuel"><span class="toc-text">Arthur Samuel</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Supervised-Learning"><span class="toc-text">Supervised Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Regression-Problems"><span class="toc-text">Regression Problems</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Classification-Problems"><span class="toc-text">Classification Problems</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unsupervised-Learning"><span class="toc-text">Unsupervised Learning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model-Representation"><span class="toc-text">Model Representation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cost-Function"><span class="toc-text">Cost Function</span></a></li>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
+</div>
+        <div class="post-content">
+            <p>lessons by <a href="https://www.coursera.org/instructor/andrewng" target="_blank" rel="noopener">Andrew Ng</a></p>
+<a id="more"></a>
+
+<h2 id="Definition-of-machine-learning"><a href="#Definition-of-machine-learning" class="headerlink" title="Definition of machine learning"></a>Definition of machine learning</h2><h4 id="Tom-Mitchell"><a href="#Tom-Mitchell" class="headerlink" title="Tom Mitchell"></a>Tom Mitchell</h4><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.”</p>
+<h4 id="Arthur-Samuel"><a href="#Arthur-Samuel" class="headerlink" title="Arthur Samuel"></a>Arthur Samuel</h4><p>“the field of study that gives computers the ability to learn without being explicitly programmed”</p>
+<h2 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h2><blockquote>
+<ul>
+<li>given a data set</li>
+<li>already know what our correct output should look like</li>
+</ul>
+</blockquote>
+<h4 id="Regression-Problems"><a href="#Regression-Problems" class="headerlink" title="Regression Problems"></a>Regression Problems</h4><p>map input variables to some continuous function</p>
+<p>线性回归模拟预测</p>
+<h4 id="Classification-Problems"><a href="#Classification-Problems" class="headerlink" title="Classification Problems"></a>Classification Problems</h4><p>map input variables into discrete categories</p>
+<p>离散点分类预测</p>
+<h2 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning"></a>Unsupervised Learning</h2><blockquote>
+<ul>
+<li>little or no idea what our results should look like</li>
+<li>cluster the data based on relationships among the variables in the data</li>
+<li>no feedback based on the prediction results</li>
+</ul>
+</blockquote>
+<p>未知结果的集群分类</p>
+<h2 id="Model-Representation"><a href="#Model-Representation" class="headerlink" title="Model Representation"></a>Model Representation</h2><p>$x^{(i)}$ – “input” variables</p>
+<p> $y^{(i)}$ – “output” or target variables</p>
+<p>$(x^{(i)}, y^{(i)})$ – training example –&gt; form training set</p>
+<p>X – space of input values</p>
+<p>Y – space of output values</p>
+<p>$h(x)$ – hypothesis, a function from X to Y</p>
+<h2 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h2><p>also called “<strong>Squared error function</strong>“, or “<strong>Mean squared error</strong>“</p>
+<p>$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum <em>{i=1}^m \left ( \hat{y}</em>{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum <em>{i=1}^m \left (h_\theta (x</em>{i}) - y_{i} \right)^2$</p>
+<blockquote>
+<p>The mean is halved $\left(\frac{1}{2}\right)$ as a convenience for the computation of the gradient descent, as the derivative term of the square function will cancel out the $\frac{1}{2}$ term.</p>
+</blockquote>
+<p>值要尽可能的小</p>
+
+        </div>
+        
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/Machine-learning/" title="Machine learning">Machine learning</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
+    
+        
+        
+            <a class="next" href="/2019/08/09/当我再次迈开脚步/">
+                <span class="nav-default">当我再次迈开脚步</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        
+    
+</div>
+<div id="comment-container"></div>
+    </div>
+</div>
+<footer class="footer-social">
+    
+    <a class="social-link" target="_blank" href="https://github.com/InanisV">
+        <i class="iconfont icon-github"></i>
+    </a>
+    
+
+    
+
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+            2019
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">InanisV</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
+</html>
